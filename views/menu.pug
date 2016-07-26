@@ -1,0 +1,24 @@
+nav#mainNav
+	ul#mainUl
+		li#options.mainLi Options
+		li#info.mainLi Info
+		li#contact.mainLi Contact
+	.optionDisp.hidden
+		ul
+			li#rainBtn Rain
+			li#whiteBtn White Noise
+			li#pinkBtn Pink Noise
+			li#nCage
+				img(src="../nick.png", alt="n-cage")
+		.player#rain.hidden
+			audio(src="../rain-03.mp3", loop="true" controls).audioPlayers
+		.player#white.hidden
+			audio(src="../white.mp3", loop = "true" controls).audioPlayers
+		.player#pink.hidden
+			audio(src="../pink.mp3", loop = "true" controls).audioPlayers
+	.info.hidden
+		iframe(width="560", height="315", src="https://www.youtube.com/embed/v4csQWOJPig", frameborder="0", allowfullscreen)
+	.contact.hidden
+		h1 Joshua Peterson
+		h1 Email: joshpeterson.dev@gmail.com
+		h2 Cell: 385-555-5555

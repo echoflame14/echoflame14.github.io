@@ -1,0 +1,113 @@
+doctype html
+html(lang='en', ng-app="app")
+	head
+		title Placeb.io
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', href='css/master.css')
+		link(rel='stylesheet', href='https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css')
+		link(rel='stylesheet', href='css/animate.css')
+		link(href="https://fonts.googleapis.com/css?family=Asap|Flamenco", rel="stylesheet")
+
+
+	body(ng-controller="ctrl")
+		header
+			#logo
+				h1 p
+			#hamburger
+				i.fa.fa-bars
+
+
+			#menuClose
+				i.fa.fa-chevron-right
+			menu#menu
+
+
+
+		#view
+			ui-view
+
+
+
+
+		#slide-ctrl
+			h1.freqControls#freqBtn Frequency Control
+				i.fa.fa-chevron-down#freqDownBtn
+			h1.presets Presets
+				i.fa.fa-chevron-down#prestsBtn
+
+
+		footer
+			#presets
+				#sleep(ng-click="sleepMode()")
+					a(ui-sref="sleep",ng-click="calcDiff()")
+						h1(ng-click="calcDiff()") SLEEP
+				#relax(ng-click="relaxMode()")
+					a(ui-sref="relax")
+						h1 RELAX
+				#focus(ng-click="focusMode()")
+					a(ui-sref="focus")
+						h1 FOCUS
+			#up-down-container
+				#left
+					section
+						h1 LEFT
+					.flexCol
+						i.fa.fa-chevron-circle-up.up(ng-click="leftUp(leftHz)")
+						input(type="text", name="leftHzDisplay", value="leftHz",ng-model="leftHz")#freq1
+
+						i.fa.fa-chevron-circle-down.down(ng-click="leftDown(leftHz)")
+
+				#right
+					section
+						h1 RIGHT
+					.flexCol
+						i.fa.fa-chevron-circle-up.up(ng-click="rightUp(rightHz)")
+						input(type="text", name="rightHzDisplay", value="rightHz",ng-model="rightHz")#freq2
+						i.fa.fa-chevron-circle-down.down(ng-click="rightDown(rightHz)")
+
+
+			section.pause-play
+				h1
+					i.fa.fa-play#playBtn
+					i.fa.fa-stop#pauseBtn
+					i.fa.fa-volume-up#volumeBtn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// jquery Cdn
+		script(src="http://code.jquery.com/jquery-3.1.0.min.js")
+		// Angular Cdn
+		script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js")
+		// ui-router
+		script(type="text/javascript", src="js/ui-router.js")
+		// chart.js
+		script(type="application/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js")
+		// Angular files
+
+		script(type="text/javascript", src="js/app.js")
+		script(type="text/javascript", src="js/ctrl.js")
+		script(type="text/javascript", src="js/srvc.js")
+		script(type="text/javascript", src="js/dir.js")
+		// Personal etc js
+		script(type="text/javascript", src="js/script.js")

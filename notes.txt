@@ -1,0 +1,20 @@
+ideas for placeb.io
+	add a time function and volume controls
+	easy goals:
+		make the arrow change to reflect the state of the slide
+		add the menu popout for the hamburger
+		make a While loop for while on === true, to keep the animation going
+
+
+
+	streach goals:
+		Add optional background tracks such as rain or kittens :)
+			Have the view background change to reflect the background track
+				For rain, I could use a paralax raidrop sort o background
+				For kittens, animated paralaxed pawPrints?
+				not the beez nick cage easter egg 600 and 620 sounds like bees
+
+
+for the jive dynamic animation function i need to do these things
+	1: make a fn in my srvc that will take in an element and a number
+	2: use a loop to set the height of the current element using nth(child)
